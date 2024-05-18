@@ -1,0 +1,342 @@
+[2024-05-18 02:30:48,156: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 02:30:49,910: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 02:30:49,918: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 02:30:49,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 02:30:49,939: INFO: common: created directory at: artifacts]
+[2024-05-18 02:30:49,939: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 02:30:54,213: INFO: data_ingestion: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: 0FC8:08E8:18770E:1CB939:6647C580
+Accept-Ranges: bytes
+Date: Fri, 17 May 2024 21:00:52 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom4739-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1715979651.317304,VS0,VE936
+Vary: Authorization,Accept-Encoding,Origin
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 13dcdc4732733b2d9231f89127d1003b6579de8c
+Expires: Fri, 17 May 2024 21:05:52 GMT
+Source-Age: 0
+
+]
+[2024-05-18 02:30:54,528: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 02:30:54,528: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 02:30:54,537: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 02:30:54,542: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 02:30:54,548: INFO: common: created directory at: artifacts]
+[2024-05-18 02:30:54,548: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 02:30:54,551: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 02:30:54,551: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 02:30:54,559: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 02:30:54,570: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 02:30:54,570: INFO: common: created directory at: artifacts]
+[2024-05-18 02:30:54,570: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 02:30:58,708: ERROR: main: Couldn't instantiate the backend tokenizer from one of: 
+(1) a `tokenizers` library serialization file, 
+(2) a slow tokenizer instance to convert or 
+(3) an equivalent slow tokenizer class to instantiate and convert. 
+You need to have sentencepiece installed to convert a slow tokenizer to a fast one.]
+Traceback (most recent call last):
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\main.py", line 34, in <module>
+    data_transformation.main()
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\src\textSummarizer\conponents\data_transformation.py", line 12, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 899, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\tokenization_utils_base.py", line 2110, in from_pretrained
+    return cls._from_pretrained(
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\tokenization_utils_base.py", line 2336, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 137, in __init__
+    super().__init__(
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\tokenization_utils_fast.py", line 127, in __init__
+    raise ValueError(
+ValueError: Couldn't instantiate the backend tokenizer from one of: 
+(1) a `tokenizers` library serialization file, 
+(2) a slow tokenizer instance to convert or 
+(3) an equivalent slow tokenizer class to instantiate and convert. 
+You need to have sentencepiece installed to convert a slow tokenizer to a fast one.
+[2024-05-18 09:57:47,180: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 09:57:48,553: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 09:57:48,553: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:57:48,562: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:57:48,562: INFO: common: created directory at: artifacts]
+[2024-05-18 09:57:48,562: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 09:57:48,562: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 09:57:48,663: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 09:57:48,663: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 09:57:48,669: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:57:48,672: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:57:48,672: INFO: common: created directory at: artifacts]
+[2024-05-18 09:57:48,674: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 09:57:48,674: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 09:57:48,674: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 09:57:48,677: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:57:48,677: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:57:48,677: INFO: common: created directory at: artifacts]
+[2024-05-18 09:57:48,677: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 09:57:49,540: ERROR: main: 
+PegasusConverter requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+]
+Traceback (most recent call last):
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\main.py", line 34, in <module>
+    data_transformation.main()
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\src\textSummarizer\pipeline\stage_03_data_transformation.py", line 13, in main
+    data_transformation = DataTransformation(config=data_transformation_config)
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\src\textSummarizer\conponents\data_transformation.py", line 12, in __init__
+    self.tokenizer = AutoTokenizer.from_pretrained(config.tokenizer_name)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\models\auto\tokenization_auto.py", line 899, in from_pretrained
+    return tokenizer_class_fast.from_pretrained(pretrained_model_name_or_path, *inputs, **kwargs)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\tokenization_utils_base.py", line 2110, in from_pretrained
+    return cls._from_pretrained(
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\tokenization_utils_base.py", line 2336, in _from_pretrained
+    tokenizer = cls(*init_inputs, **init_kwargs)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\models\pegasus\tokenization_pegasus_fast.py", line 137, in __init__
+    super().__init__(
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\tokenization_utils_fast.py", line 117, in __init__
+    fast_tokenizer = convert_slow_tokenizer(slow_tokenizer)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\convert_slow_tokenizer.py", line 1631, in convert_slow_tokenizer
+    return converter_class(transformer_tokenizer).converted()
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\convert_slow_tokenizer.py", line 546, in __init__
+    requires_backends(self, "protobuf")
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\utils\import_utils.py", line 1463, in requires_backends
+    raise ImportError("".join(failed))
+ImportError: 
+PegasusConverter requires the protobuf library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/protocolbuffers/protobuf/tree/master/python#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+[2024-05-18 09:58:48,696: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 09:58:49,625: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 09:58:49,625: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:58:49,633: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:58:49,633: INFO: common: created directory at: artifacts]
+[2024-05-18 09:58:49,633: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 09:58:49,633: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 09:58:49,746: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 09:58:49,746: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 09:58:49,754: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:58:49,754: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:58:49,754: INFO: common: created directory at: artifacts]
+[2024-05-18 09:58:49,754: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 09:58:49,754: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 09:58:49,754: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 09:58:49,762: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:58:49,762: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:58:49,762: INFO: common: created directory at: artifacts]
+[2024-05-18 09:58:49,762: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 09:58:56,462: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 09:58:56,462: INFO: main: *******************]
+[2024-05-18 09:58:56,462: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-05-18 09:58:56,474: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 09:58:56,474: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 09:58:56,474: INFO: common: created directory at: artifacts]
+[2024-05-18 09:58:56,482: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-18 10:10:19,731: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 10:10:20,789: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 10:10:20,805: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:10:20,805: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:10:20,805: INFO: common: created directory at: artifacts]
+[2024-05-18 10:10:20,805: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 10:10:20,805: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 10:10:20,917: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:10:20,917: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 10:10:20,917: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:10:20,917: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:10:20,917: INFO: common: created directory at: artifacts]
+[2024-05-18 10:10:20,917: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 10:10:20,933: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:10:20,933: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 10:10:20,933: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:10:20,933: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:10:20,933: INFO: common: created directory at: artifacts]
+[2024-05-18 10:10:20,933: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 10:10:24,078: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:10:24,082: INFO: main: *******************]
+[2024-05-18 10:10:24,082: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-05-18 10:10:24,088: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:10:24,098: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:10:24,098: INFO: common: created directory at: artifacts]
+[2024-05-18 10:10:24,098: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-18 10:10:53,676: ERROR: main: Using the `Trainer` with `PyTorch` requires `accelerate>=0.21.0`: Please run `pip install transformers[torch]` or `pip install accelerate -U`]
+Traceback (most recent call last):
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\main.py", line 45, in <module>
+    model_trainer.main()
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\src\textSummarizer\pipeline\stage_04_model_trainer.py", line 14, in main
+    model_trainer_config.train()
+  File "C:\Users\Nishant\OneDrive\Desktop\Text-Summarization-NLP-Project-main\src\textSummarizer\conponents\model_trainer.py", line 34, in train
+    trainer_args = TrainingArguments(
+  File "<string>", line 128, in __init__
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\training_args.py", line 1641, in __post_init__
+    and (self.device.type == "cpu" and not is_torch_greater_or_equal_than_2_3)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\training_args.py", line 2149, in device
+    return self._setup_devices
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\utils\generic.py", line 59, in __get__
+    cached = self.fget(obj)
+  File "C:\Users\nishant\Anaconda3\envs\textS\lib\site-packages\transformers\training_args.py", line 2055, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.21.0`: Please run `pip install transformers[torch]` or `pip install accelerate -U`
+[2024-05-18 10:13:14,915: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 10:13:17,590: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 10:13:17,593: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:13:17,597: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:13:17,597: INFO: common: created directory at: artifacts]
+[2024-05-18 10:13:17,597: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 10:13:17,597: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 10:13:17,714: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:13:17,714: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 10:13:17,719: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:13:17,723: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:13:17,723: INFO: common: created directory at: artifacts]
+[2024-05-18 10:13:17,723: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 10:13:17,723: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:13:17,723: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 10:13:17,729: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:13:17,733: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:13:17,733: INFO: common: created directory at: artifacts]
+[2024-05-18 10:13:17,733: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 10:13:20,803: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:13:20,803: INFO: main: *******************]
+[2024-05-18 10:13:20,803: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-05-18 10:13:20,813: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:13:20,817: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:13:20,817: INFO: common: created directory at: artifacts]
+[2024-05-18 10:13:20,823: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-18 10:20:16,445: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 10:20:20,025: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 10:20:20,050: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:20:20,075: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:20:20,108: INFO: common: created directory at: artifacts]
+[2024-05-18 10:20:20,143: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 10:20:20,146: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 10:20:20,455: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:20:20,458: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 10:20:20,465: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:20:20,465: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:20:20,465: INFO: common: created directory at: artifacts]
+[2024-05-18 10:20:20,465: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 10:20:20,476: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:20:20,476: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 10:20:20,490: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:20:20,495: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:20:20,495: INFO: common: created directory at: artifacts]
+[2024-05-18 10:20:20,495: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 10:20:23,809: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:20:23,809: INFO: main: *******************]
+[2024-05-18 10:20:23,809: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-05-18 10:20:23,818: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:20:23,826: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:20:23,826: INFO: common: created directory at: artifacts]
+[2024-05-18 10:20:23,828: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-18 10:49:12,050: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 10:49:14,531: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 10:49:14,531: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:49:14,542: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:49:14,543: INFO: common: created directory at: artifacts]
+[2024-05-18 10:49:14,544: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 10:49:14,544: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 10:49:14,669: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:49:14,669: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 10:49:14,674: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:49:14,674: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:49:14,674: INFO: common: created directory at: artifacts]
+[2024-05-18 10:49:14,674: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 10:49:14,679: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:49:14,679: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 10:49:14,682: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:49:14,682: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:49:14,682: INFO: common: created directory at: artifacts]
+[2024-05-18 10:49:14,682: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 10:49:24,674: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 10:49:24,674: INFO: main: *******************]
+[2024-05-18 10:49:24,674: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-05-18 10:49:24,682: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 10:49:24,691: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 10:49:24,691: INFO: common: created directory at: artifacts]
+[2024-05-18 10:49:24,693: INFO: common: created directory at: artifacts/model_trainer]
+[2024-05-18 11:00:19,334: INFO: config: PyTorch version 2.3.0 available.]
+[2024-05-18 11:00:21,588: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-05-18 11:00:21,594: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 11:00:21,594: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 11:00:21,599: INFO: common: created directory at: artifacts]
+[2024-05-18 11:00:21,599: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-05-18 11:00:21,599: INFO: data_ingestion: File already exists of size: ~ 7718 KB]
+[2024-05-18 11:00:21,738: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-05-18 11:00:21,738: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2024-05-18 11:00:21,746: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 11:00:21,749: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 11:00:21,749: INFO: common: created directory at: artifacts]
+[2024-05-18 11:00:21,749: INFO: common: created directory at: artifacts/data_validation]
+[2024-05-18 11:00:21,752: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 11:00:21,752: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2024-05-18 11:00:21,754: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 11:00:21,754: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 11:00:21,754: INFO: common: created directory at: artifacts]
+[2024-05-18 11:00:21,758: INFO: common: created directory at: artifacts/data_transformation]
+[2024-05-18 11:00:24,230: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2024-05-18 11:00:24,230: INFO: main: *******************]
+[2024-05-18 11:00:24,230: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2024-05-18 11:00:24,244: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-05-18 11:00:24,244: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-05-18 11:00:24,244: INFO: common: created directory at: artifacts]
+[2024-05-18 11:00:24,249: INFO: common: created directory at: artifacts/model_trainer]
